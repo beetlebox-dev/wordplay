@@ -53,6 +53,7 @@ div.menu-items {
     font-weight: bold;
     display: none;
     color: hsl(180, 100%, 70%);
+    transition-duration: 350ms;
 }
 .menu-items a.active-tab {
     color: hsl(86, 100%, 70%);
