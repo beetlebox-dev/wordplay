@@ -6,7 +6,7 @@ import wordplay.find_opposite as find_opposite
 from admin import admin_alert_thread
 
 
-# Copyright 2021 Johnathan Pennington | All rights reserved.
+# (c) 2022 Johnathan Pennington | All rights reserved.
 
 
 wordnet_index = None

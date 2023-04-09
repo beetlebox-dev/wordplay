@@ -5,6 +5,9 @@ import wordplay.manage_database as manage_database
 from copy import deepcopy
 
 
+# (c) 2022 Johnathan Pennington | All rights reserved.
+
+
 POINTER_SYMBOL_KEY = manage_database.POINTER_SYMBOL_KEY
 POINTER_TYPES_TO_IGNORE = manage_database.POINTER_TYPES_TO_IGNORE
 IGNORE_ANTONYMS = manage_database.IGNORE_ANTONYMS

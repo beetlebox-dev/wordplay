@@ -1,4 +1,8 @@
 
+
+(c) 2022 Johnathan Pennington | All rights reserved.
+
+
 group_map[group_id][x]
 x = 0 = tuple of adjacent group ids
 x = 1 = tuple of non-adjacent reachable group ids

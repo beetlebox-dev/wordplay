@@ -2,6 +2,9 @@ import csv
 import pickle
 
 
+# (c) 2022 Johnathan Pennington | All rights reserved.
+
+
 # part of speech
 POS_KEY = {'noun': 'n', 'verb': 'v', 'adj': 'a', 'adv': 'r'}
 

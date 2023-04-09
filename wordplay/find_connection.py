@@ -3,6 +3,9 @@ import wordplay.manage_database as manage_database
 from copy import deepcopy
 
 
+# (c) 2022 Johnathan Pennington | All rights reserved.
+
+
 START_HUE = 280
 HUE_STEP = -18
 
