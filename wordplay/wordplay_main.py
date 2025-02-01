@@ -3,7 +3,7 @@ from threading import Thread
 import pickle
 import wordplay.find_connection as find_connection
 import wordplay.find_opposite as find_opposite
-from admin import admin_alert_thread
+from beetlebox.admin import admin_alert_thread
 
 
 # (c) 2022 Johnathan Pennington | All rights reserved.
