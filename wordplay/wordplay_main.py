@@ -101,9 +101,9 @@ def opposite_random():
     join_thread(wordnet_data_thread)
     word = find_connection.random_main_group_word(wordnet_data)
     destination = url_for('opposite', word=word)
-    admin_alert_thread('Web App - Log', f'WORDPLAY\nOpposite page random button click.\n'
-                                        f'Request: {request.url}\nRedirect to: {request.url_root}{destination[1:]}\n'
-                                        f'WORD: {word}')
+    # admin_alert_thread('Web App - Log', f'WORDPLAY\nOpposite page random button click.\n'
+    #                                     f'Request: {request.url}\nRedirect to: {request.url_root}{destination[1:]}\n'
+    #                                     f'WORD: {word}')
     return redirect(destination)
 
 
@@ -133,8 +133,8 @@ def opposite_result(synset, word):
         tab_class = tab_classes('opposite')
         cleaned_word = find_connection.remove_non_wordnet_chars(word)
         if data['status'] == 'choose_synset':
-            admin_alert_thread('Web App - Log',
-                               f'WORDPLAY\n{request.url}\nRendered opposite choose-synset page.\nWORD: {word}\nSYNSET: {synset}')
+            # admin_alert_thread('Web App - Log',
+            #                    f'WORDPLAY\n{request.url}\nRendered opposite choose-synset page.\nWORD: {word}\nSYNSET: {synset}')
             return render_template('wordplay/choose_synset.html', source=cleaned_word, synsets=data['data'],
                                    message=data['message'], tab_classes=tab_class)
         else:
@@ -158,9 +158,9 @@ def connect_random():
     source = find_connection.random_main_group_word(wordnet_data)
     target = find_connection.random_main_group_word(wordnet_data)
     destination = url_for('connect', source=source, target=target)
-    admin_alert_thread('Web App - Log', f'WORDPLAY\nConnect page random button click.\n'
-                                        f'Request: {request.url}\nRedirect to: {request.url_root}{destination[1:]}\n'
-                                        f'START: {source}\nTARGET: {target}')
+    # admin_alert_thread('Web App - Log', f'WORDPLAY\nConnect page random button click.\n'
+    #                                     f'Request: {request.url}\nRedirect to: {request.url_root}{destination[1:]}\n'
+    #                                     f'START: {source}\nTARGET: {target}')
     return redirect(destination)
 
 
