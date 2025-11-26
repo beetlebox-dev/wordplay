@@ -391,9 +391,9 @@ def web_app_inquiry(wordnet_data, wordnet_index, group_map, start_word, target_w
     formatted_target_word = clean_string(target_word)
 
     if formatted_start_word == '':
-        return {'status': 'error', 'message': 'Please enter a start word.'}
+        return {'status': 'error', 'message': 'Please enter a start word.', 'admin_alert': False, }
     if formatted_target_word == '':
-        return {'status': 'error', 'message': 'Please enter a target word.'}
+        return {'status': 'error', 'message': 'Please enter a target word.', 'admin_alert': False, }
 
     if formatted_start_word not in wordnet_index:
         return {'status': 'error', 'message': f"""I'm sorry, but "{start_word}" isn't in my database."""}

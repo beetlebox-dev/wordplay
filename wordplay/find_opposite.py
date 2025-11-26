@@ -326,7 +326,7 @@ def web_app_inquiry(wordnet_data, wordnet_index, groups_without_opposites, start
     formatted_start_word = find_connection.clean_string(start_word)
 
     if formatted_start_word == '':
-        return {'status': 'error', 'message': 'Please enter a word.'}
+        return {'status': 'error', 'message': 'Please enter a word.', 'admin_alert': False, }
 
     if start_synset == '':
 

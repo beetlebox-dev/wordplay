@@ -126,8 +126,9 @@ def opposite_result(synset, word):
 
     if data['status'] == 'error':
         tab_class = tab_classes('opposite')
-        admin_alert_thread('Web App - ERROR',
-                           f'WORDPLAY\n{request.url}\nWORD: {word}\nSYNSET: {synset}\n{data["message"]}')
+        if 'admin_alert' not in data or data['admin_alert']:
+            admin_alert_thread('Web App - ERROR',
+                               f'WORDPLAY\n{request.url}\nWORD: {word}\nSYNSET: {synset}\n{data["message"]}')
         return render_template('wordplay/opposite.html', source=word, error=data['message'], tab_classes=tab_class)
     else:
         tab_class = tab_classes('opposite')
@@ -180,8 +181,9 @@ def connect_result(source, target):
     data = find_connection.web_app_inquiry(wordnet_data, wordnet_index, group_map, source, target)
 
     if data['status'] == 'error':
-        admin_alert_thread('Web App - ERROR',
-                           f'WORDPLAY\n{request.url}\nSTART: {source}\nTARGET: {target}\n{data["message"]}')
+        if 'admin_alert' not in data or data['admin_alert']:
+            admin_alert_thread('Web App - ERROR',
+                               f'WORDPLAY\n{request.url}\nSTART: {source}\nTARGET: {target}\n{data["message"]}')
         tab_class = tab_classes('connect')
         return render_template('wordplay/connect.html', source=source, target=target,
                                error=data['message'], tab_classes=tab_class)
